@@ -7,4 +7,5 @@
 \#*
 .\#*
 .DS*
-example
+example/*.png
+example/*.pdf
