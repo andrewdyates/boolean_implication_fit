@@ -1,7 +1,7 @@
 b <- 0.5
 in.th <- function(v, th, b=0.5) v>=th-b & v<=th+b
 
-cls.to.enum(cls) {
+cls.to.enum <- function(cls) {
   if(cls=="NA") r<-0
   if(cls=="HIH") r<-1
   if(cls=="PC") r<-2
@@ -36,24 +36,28 @@ q00$expect  <- x0*y0/total
 q00$stat <- (q00$exp-x0.y0)/sqrt(q00$expect)
 q00$err  <- (x0.y0/x0 + x0.y0/y0)/2
 q00$sparse <- q00$stat > 3 && q00$err < 0.1
+if(is.na(q00$sparse)) q00$sparse <- T
 # x1.y0
 q10 <- list()
 q10$expect  <- x1*y0/total
 q10$stat <- (q10$exp-x1.y0)/sqrt(q10$expect)
 q10$err  <- (x1.y0/x1 + x1.y0/y0)/2
 q10$sparse <- q10$stat > 3 && q10$err < 0.1
+if(is.na(q10$sparse)) q10$sparse <- T
 # x0.y1
 q01 <- list()
 q01$expect  <- x0*y1/total
 q01$stat <- (q01$exp-x0.y1)/sqrt(q01$expect)
 q01$err  <- (x0.y1/x0 + x0.y1/y1)/2
 q01$sparse <- q01$stat > 3 && q01$err < 0.1
+if(is.na(q01$sparse)) q01$sparse <- T
 # x1.y1
 q11 <- list()
 q11$expect  <- x1*y1/total
 q11$stat <- (q11$exp-x1.y1)/sqrt(q11$expect)
 q11$err  <- (x1.y1/x1 + x1.y1/y1)/2
 q11$sparse <- q11$stat > 3 && q11$err < 0.1
+if(is.na(q11$sparse)) q11$sparse <- T
 
 R <- list(q00=q00,q01=q01,q10=q10,q11=q11,total=total,all=length(x),pct.discard=pct.discard,
           x0.y0=x0.y0, x0.y1=x0.y1, x1.y0=x1.y0, x1.y1=x1.y1, discard=discard)

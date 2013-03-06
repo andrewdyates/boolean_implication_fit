@@ -1,17 +1,23 @@
+## WARNING: THIS IS SUPER HACKY
 ## Not optimized: boolean classification
 ## Sample:
-## RScript run.all.bool.R $HOME/c.elegans/clean_data/GSE2180.clean.RData
+## Rscript run.all.bool.R $HOME/c.elegans/clean_data/GSE2180.clean.RData
 
+library(Biobase)
+#library(lumi)
 source("step.up.R")
 source("bool.R")
 
 print.eval = TRUE
 argv <- commandArgs(trailingOnly = TRUE)
 
-## 1. Load matrices
-ROW <- load(argv[1])
+## 1. Load matrices (WARNING: SUPER HACKY!)
+load(argv[1])
+ROW <- exprs(GSE2180)
+dim(ROW)
 if(length(argv) >= 2) {
-  COL <- load(argv[2])
+  #load(argv[2])
+  COL <- M
   outname <- paste0(argv[1],".vs.",argv[2],".cls.RData")
 } else {
   COL <- NULL
@@ -24,7 +30,7 @@ for(i in 1:nrow(ROW)) {
   RS.ROW[[name]] <- fit.upstep(ROW[i,])
 }
 row.stds <- apply(ROW,1,sd)
-b.row <- quantile(row.stds,0.3)*2
+b.row <- quantile(row.stds,0.03)*2
 print("Row Quantile")
 print(b.row)
 
@@ -36,7 +42,7 @@ if (!is.null(COL)) {
     RS.COL[[name]] <- fit.upstep(COL[i,])
   }
   col.stds <- apply(COL,1,sd)
-  b.col <- quantile(col.stds,0.3)*2
+  b.col <- quantile(col.stds,0.03)*2
   print("Col Quantile")
   print(b.col)
 } else {
@@ -50,6 +56,7 @@ n <- length(RS.COL)
 CLS <- mat.or.vec(m,n)
 
 for(i in 1:n) {
+  print(i)
   for(j in 1:n) {
     y <- ROW[i,]
     y.th <- RS.ROW[[i]]$th
@@ -59,3 +66,5 @@ for(i in 1:n) {
     CLS[i,j] <- cls.to.enum(RR$CLS)
   }
 }
+print(outname)
+save(CLS, RS.ROW, RS.COL, b.row, b.col, file=outname)
