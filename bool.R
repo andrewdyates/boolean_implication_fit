@@ -1,15 +1,27 @@
 b <- 0.5
-
 in.th <- function(v, th, b=0.5) v>=th-b & v<=th+b
 
-cls.pair <- function(x, y, x.th, y.th, b=0.5, do.plot=FALSE) {
+cls.to.enum(cls) {
+  if(cls=="NA") r<-0
+  if(cls=="HIH") r<-1
+  if(cls=="PC") r<-2
+  if(cls=="LIL") r<-3
+  if(cls=="UNL") r<-4
+  if(cls=="HIL") r<-5
+  if(cls=="NC") r<-6
+  if(cls=="LIH") r<-7  
+  r
+}
+
+## MAIN FUNCTION
+cls.pair <- function(x, y, x.th, y.th, b.x=0.5, b.y=0.5, do.plot=FALSE) {
 discard <- in.th(x,x.th,b) | in.th(y,y.th,b)
 pct.discard <- sum(discard)/length(x)*100
 
-x0.y0 <- sum(x<x.th-b & y<y.th-b)
-x0.y1 <- sum(x<x.th-b & y>y.th+b)
-x1.y0 <- sum(x>x.th+b & y<y.th-b)
-x1.y1 <- sum(x>x.th+b & y>y.th+b)
+x0.y0 <- sum(x<x.th-b.x & y<y.th-b.y)
+x0.y1 <- sum(x<x.th-b.x & y>y.th+b.y)
+x1.y0 <- sum(x>x.th+b.x & y<y.th-b.y)
+x1.y1 <- sum(x>x.th+b.x & y>y.th+b.y)
 x0 <- x0.y0 + x0.y1
 x1 <- x1.y0 + x1.y1
 y0 <- x0.y0 + x1.y0
@@ -69,11 +81,11 @@ if(do.plot) {
   col[discard]<-"#ffcccc"
   plot(x,y, col=col, xlab=rownames(D)[i], ylab=rownames(D)[j], main=R$CLS)
   abline(v=x.th, col="red", lwd=2)
-  abline(v=x.th+b, col="red", lty=3)
-  abline(v=x.th-b, col="red", lty=3)
+  abline(v=x.th+b.x, col="red", lty=3)
+  abline(v=x.th-b.x, col="red", lty=3)
   abline(h=y.th, col="blue", lwd=2)
-  abline(h=y.th+b, col="blue",lty=3)
-  abline(h=y.th-b, col="blue",lty=3)
+  abline(h=y.th+b.y, col="blue",lty=3)
+  abline(h=y.th-b.y, col="blue",lty=3)
 }
 R
 } # END cls.pair()
