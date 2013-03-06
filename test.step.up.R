@@ -2,7 +2,7 @@
 ## ---------------------------------
 ## Test expression data "row1"
 ## is log transformed and normalized expression from probe
-## ILMN_1787689, gene A2BP1 in combined Gibbs four brain tissue mRNA
+## ILMN_1787689, gene RBFOX1 in combined Gibbs four brain tissue mRNA
 ## data on Illumina Bead Array platform.
 ##
 source("step.up.R")
@@ -11,12 +11,14 @@ row1 <- c(5.220542,5.364648,5.403960,5.456219,5.473738,5.516390,5.529153,5.53347
 print(sum((row1-mean(row1))^2))
 R <- fit.upstep(row1)
 print(R$sum.sse)
+#[1] 144.7776
+#[1] 45.11757
 
 plot.sse(R)
-pdf("A2BP1_sse.pdf", width=8, height=8)
-plot.sse(R, add.mean.median=TRUE, main="SSE: A2BP1 mRNA in Gibbs 4 Brain Tissues")
+pdf("RBFOX1_sse.pdf", width=8, height=8)
+plot.sse(R, add.mean.median=TRUE, main="SSE: RBFOX1 mRNA in Gibbs 4 Brain Tissues")
 dev.off()
 plot.stepfit(R, row1)
-pdf("A2BP1_exprs.pdf", width=8, height=8)
-plot.stepfit(R, row1, add.mean.median=TRUE, main="Fitted Step: A2BP1 mRNA in Gibbs 4 Brain Tissues")
+pdf("RBFOX1_exprs.pdf", width=8, height=8)
+plot.stepfit(R, row1, add.mean.median=TRUE, main="Fitted Step: RBFOX1 mRNA in Gibbs 4 Brain Tissues")
 dev.off()

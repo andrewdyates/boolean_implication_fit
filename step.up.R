@@ -57,7 +57,7 @@ plot.stepfit <- function(R, v, add.mean.median=FALSE, ...) {
   }
   segments(x0=0, y0=R$low, x1=R$idx, y1=R$low, col="#ff0000", lwd=6)
   segments(x0=R$idx, y0=R$low, x1=R$idx, y1=R$high, col="#ff0000", lwd=6)
-  segments(x0=R$idx, y0=R$high, x1=length(row1)+1, y1=R$high, col="#ff0000", lwd=6)
+  segments(x0=R$idx, y0=R$high, x1=length(v)+1, y1=R$high, col="#ff0000", lwd=6)
   points(R$idx+0.5, R$th, col="#ff0000", pch=15, cex=3)
 }
 
