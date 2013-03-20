@@ -5,7 +5,7 @@ sse <- function(v) sum((v-mean(v))^2)
 ## compute sum squared error per step location "i"
 ## 1:i -> low step
 ## i+1:n -> high step
-fit.upstep <- function(v, do.plots=FALSE) {
+fit.upstep <- function(v) {
   R <- list()
   v <- sort(v)
   n <- length(v)
@@ -24,6 +24,7 @@ fit.upstep <- function(v, do.plots=FALSE) {
 
 plot.sse <- function(R, add.mean.median=FALSE, ...) {
   plot(R$v.sse, xlab="Highest Index In Low Step", ylab="Sum of Sum Squared Errors", ...)
+  legend("topright",pch=c(15,16,17),col=c("#cc0000","#0000cc","#009900"),legend=c("Stepfit","Mean","Median"))
   abline(h=R$sum.sse, col="#cc0000", lty=1)
   abline(v=R$idx, col="#cc0000", lty=3)
   points(R$idx, R$v.sse[R$idx], col="#ff0000", pch=15, cex=3)
@@ -43,6 +44,7 @@ plot.sse <- function(R, add.mean.median=FALSE, ...) {
 plot.stepfit <- function(R, v, add.mean.median=FALSE, ...) {
   v <- sort(v)
   plot(v, xlab="Rank", ylab="Log Expression", ...)
+  legend("topleft",pch=c(15,16,17),col=c("#cc0000","#0000cc","#009900"),legend=c("Stepfit","Mean","Median"))
   abline(h=R$th, col="#cc0000", lty=2, lwd=2)
   abline(v=R$idx, col="#990000", lty=3)
   abline(h=R$high, col="#990000", lwd=1, lty=3)
