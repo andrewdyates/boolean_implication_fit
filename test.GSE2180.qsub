@@ -11,6 +11,6 @@ set -x
 cd /nfs/01/osu6683/
 source .bash_profile
 
-cd $HOME
+cd $HOME/pymod/boolean_implication_fit
 
 /usr/bin/time Rscript $HOME/pymod/boolean_implication_fit/run.all.bool.R $HOME/c.elegans/clean_data/GSE2180.clean.RData
