@@ -1,4 +1,5 @@
 
+
 q2txt <- function(q, name, Z=3, Err=0.1, cnt=1)
   paste(paste0(name, " n/E: ", q$count, "/", formatC(q$expect,digits=2,format="f")),
         paste0("(Z>",Z,",Err<",Err,",n>,",cnt,"): "),
@@ -21,7 +22,7 @@ cls.to.enum <- function(cls) {
 
 ## MAIN FUNCTION
 cls.pair <- function(x, y, x.th, y.th, b.x=0.5, b.y=0.5, do.plot=FALSE, xlab="", ylab="", quad.min=1, Z=3, E=0.1) {
-discard <- in.th(x,x.th,b) | in.th(y,y.th,b)
+discard <- in.th(x,x.th,b.x) | in.th(y,y.th,b.y)
 pct.discard <- sum(discard)/length(x)*100
 
 x0.y0 <- sum(x<x.th-b.x & y<y.th-b.y)

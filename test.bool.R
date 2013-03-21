@@ -1,4 +1,4 @@
-load("simulated.data.RData")
+load("example/simulated.data.RData")
 source("step.up.R")
 source("bool.R")
 
