@@ -1,0 +1,16 @@
+#PBS -N BoolCls
+#PBS -l nodes=1:ppn=12
+#PBS -j oe
+#PBS -m ea
+#PBS -S /bin/bash
+#PBS -l walltime=99:00:00
+
+#tdate=$(date +%%T)
+
+set -x
+cd /nfs/01/osu6683/
+source .bash_profile
+
+cd $HOME/pymod/boolean_implication_fit
+
+/usr/bin/time Rscript $HOME/pymod/boolean_implication_fit/run.all.bool.R $HOME/c.elegans/clean_data/GSE2180.clean.RData

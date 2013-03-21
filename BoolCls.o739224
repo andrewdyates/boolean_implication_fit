@@ -1,0 +1,147 @@
++ cd /nfs/01/osu6683/
++ source .bash_profile
+++ export CLICOLOR=1
+++ CLICOLOR=1
+++ export TERM=xterm-color
+++ TERM=xterm-color
+++ export 'PS1=\[\e[1;32m\]\w\$\[\e[0m\] '
+++ PS1='\[\e[1;32m\]\w\$\[\e[0m\] '
+++ source /nfs/01/osu6683/pythonbase/bin/activate
++++ deactivate nondestructive
++++ '[' -n /usr/lib64/qt-3.3/bin:/usr/local/moab/7.1.0-r2/bin:/usr/local/mvapich2/1.7-intel/bin:/usr/local/torque/2.5.12/bin:/usr/local/intel/vtune_amplifier_xe_2011/bin64:/usr/local/intel/inspector_xe_2011/bin64:/usr/local/intel/composer_xe_2011_sp1.10.319/bin/intel64:/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/intel/composer_xe_2011_sp1.10.319/mpirt/bin/intel64 ']'
++++ PATH=/usr/lib64/qt-3.3/bin:/usr/local/moab/7.1.0-r2/bin:/usr/local/mvapich2/1.7-intel/bin:/usr/local/torque/2.5.12/bin:/usr/local/intel/vtune_amplifier_xe_2011/bin64:/usr/local/intel/inspector_xe_2011/bin64:/usr/local/intel/composer_xe_2011_sp1.10.319/bin/intel64:/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/intel/composer_xe_2011_sp1.10.319/mpirt/bin/intel64
++++ export PATH
++++ unset _OLD_VIRTUAL_PATH
++++ '[' -n '' ']'
++++ '[' -n /bin/bash -o -n '' ']'
++++ hash -r
++++ '[' -n '\[\e[1;32m\]\w\$\[\e[0m\] ' ']'
++++ PS1='\[\e[1;32m\]\w\$\[\e[0m\] '
++++ export PS1
++++ unset _OLD_VIRTUAL_PS1
++++ unset VIRTUAL_ENV
++++ '[' '!' nondestructive = nondestructive ']'
++++ VIRTUAL_ENV=/nfs/01/osu6683/pythonbase
++++ export VIRTUAL_ENV
++++ _OLD_VIRTUAL_PATH=/usr/lib64/qt-3.3/bin:/usr/local/moab/7.1.0-r2/bin:/usr/local/mvapich2/1.7-intel/bin:/usr/local/torque/2.5.12/bin:/usr/local/intel/vtune_amplifier_xe_2011/bin64:/usr/local/intel/inspector_xe_2011/bin64:/usr/local/intel/composer_xe_2011_sp1.10.319/bin/intel64:/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/intel/composer_xe_2011_sp1.10.319/mpirt/bin/intel64
++++ PATH=/nfs/01/osu6683/pythonbase/bin:/usr/lib64/qt-3.3/bin:/usr/local/moab/7.1.0-r2/bin:/usr/local/mvapich2/1.7-intel/bin:/usr/local/torque/2.5.12/bin:/usr/local/intel/vtune_amplifier_xe_2011/bin64:/usr/local/intel/inspector_xe_2011/bin64:/usr/local/intel/composer_xe_2011_sp1.10.319/bin/intel64:/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/intel/composer_xe_2011_sp1.10.319/mpirt/bin/intel64
++++ export PATH
++++ '[' -n '' ']'
++++ '[' -z '' ']'
++++ _OLD_VIRTUAL_PS1='\[\e[1;32m\]\w\$\[\e[0m\] '
++++ '[' x '!=' x ']'
+++++ basename /nfs/01/osu6683/pythonbase
++++ '[' pythonbase = __ ']'
+++++ basename /nfs/01/osu6683/pythonbase
++++ PS1='(pythonbase)\[\e[1;32m\]\w\$\[\e[0m\] '
++++ export PS1
++++ '[' -n /bin/bash -o -n '' ']'
++++ hash -r
++++ which virtualenvwrapper.sh
+++ source /nfs/01/osu6683/pythonbase/bin/virtualenvwrapper.sh
++++ '[' /nfs/01/osu6683/pythonbase/bin/python = '' ']'
++++ '[' virtualenv = '' ']'
++++ '[' virtualenv-clone = '' ']'
++++ VIRTUALENVWRAPPER_ENV_BIN_DIR=bin
++++ '[' '' = Windows_NT ']'
++++ '[' .project = '' ']'
++++ virtualenvwrapper_initialize
+++++ virtualenvwrapper_derive_workon_home
+++++ typeset workon_home_dir=/nfs/01/osu6683/.virtualenvs
+++++ '[' /nfs/01/osu6683/.virtualenvs = '' ']'
+++++ echo /nfs/01/osu6683/.virtualenvs
+++++ unset GREP_OPTIONS
+++++ command grep '^[^/~]'
+++++ grep '^[^/~]'
+++++ echo /nfs/01/osu6683/.virtualenvs
+++++ unset GREP_OPTIONS
+++++ command egrep '([\$~]|//)'
+++++ egrep '([\$~]|//)'
+++++ echo /nfs/01/osu6683/.virtualenvs
+++++ return 0
++++ export WORKON_HOME=/nfs/01/osu6683/.virtualenvs
++++ WORKON_HOME=/nfs/01/osu6683/.virtualenvs
++++ virtualenvwrapper_verify_workon_home -q
++++ RC=0
++++ '[' '!' -d /nfs/01/osu6683/.virtualenvs/ ']'
++++ return 0
++++ '[' /nfs/01/osu6683/.virtualenvs = '' ']'
++++ '[' /nfs/01/osu6683/.virtualenvs = '' ']'
++++ virtualenvwrapper_run_hook initialize
++++ typeset hook_script
++++ typeset result
+++++ virtualenvwrapper_tempfile initialize-hook
+++++ typeset suffix=initialize-hook
+++++ typeset file
++++++ virtualenvwrapper_mktemp -t virtualenvwrapper-initialize-hook-XXXXXXXXXX
++++++ command mktemp -t virtualenvwrapper-initialize-hook-XXXXXXXXXX
++++++ mktemp -t virtualenvwrapper-initialize-hook-XXXXXXXXXX
+++++ file=/tmp/pbstmp.739224/virtualenvwrapper-initialize-hook-8n1WGzwgli
+++++ '[' 0 -ne 0 ']'
+++++ '[' -z /tmp/pbstmp.739224/virtualenvwrapper-initialize-hook-8n1WGzwgli ']'
+++++ '[' '!' -f /tmp/pbstmp.739224/virtualenvwrapper-initialize-hook-8n1WGzwgli ']'
+++++ echo /tmp/pbstmp.739224/virtualenvwrapper-initialize-hook-8n1WGzwgli
+++++ return 0
++++ hook_script=/tmp/pbstmp.739224/virtualenvwrapper-initialize-hook-8n1WGzwgli
++++ '[' -z /nfs/01/osu6683/.virtualenvs ']'
++++ /nfs/01/osu6683/pythonbase/bin/python -c 'from virtualenvwrapper.hook_loader import main; main()' --script /tmp/pbstmp.739224/virtualenvwrapper-initialize-hook-8n1WGzwgli initialize
++++ result=0
++++ '[' 0 -eq 0 ']'
++++ '[' '!' -f /tmp/pbstmp.739224/virtualenvwrapper-initialize-hook-8n1WGzwgli ']'
++++ source /tmp/pbstmp.739224/virtualenvwrapper-initialize-hook-8n1WGzwgli
+++++ '[' -f /nfs/01/osu6683/.virtualenvs/initialize ']'
+++++ source /nfs/01/osu6683/.virtualenvs/initialize
++++ command rm -f /tmp/pbstmp.739224/virtualenvwrapper-initialize-hook-8n1WGzwgli
++++ rm -f /tmp/pbstmp.739224/virtualenvwrapper-initialize-hook-8n1WGzwgli
++++ return 0
++++ virtualenvwrapper_setup_tab_completion
++++ '[' -n /bin/bash ']'
++++ complete -o nospace -F _cdvirtualenv_complete -S/ cdvirtualenv
++++ complete -o nospace -F _cdsitepackages_complete -S/ cdsitepackages
++++ complete -o default -o nospace -F _virtualenvs workon
++++ complete -o default -o nospace -F _virtualenvs rmvirtualenv
++++ complete -o default -o nospace -F _virtualenvs cpvirtualenv
++++ complete -o default -o nospace -F _virtualenvs showvirtualenv
++++ return 0
+++ PATH=/nfs/01/osu6683/pythonbase/bin:/usr/lib64/qt-3.3/bin:/usr/local/moab/7.1.0-r2/bin:/usr/local/mvapich2/1.7-intel/bin:/usr/local/torque/2.5.12/bin:/usr/local/intel/vtune_amplifier_xe_2011/bin64:/usr/local/intel/inspector_xe_2011/bin64:/usr/local/intel/composer_xe_2011_sp1.10.319/bin/intel64:/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/intel/composer_xe_2011_sp1.10.319/mpirt/bin/intel64:/nfs/01/osu6683/mongodb/bin:/nfs/01/osu6683/R/R-2.15.1/bin
+++ export R_HOME=/nfs/01/osu6683/R/R-2.15.1
+++ R_HOME=/nfs/01/osu6683/R/R-2.15.1
+++ export LD_LIBRARY_PATH=/usr/local/mvapich2/1.7-intel/lib:/usr/local/torque/2.5.12/lib:/usr/local/intel/composer_xe_2011_sp1.10.319/compiler/lib/intel64:/usr/local/intel/composer_xe_2011_sp1.10.319/mpirt/lib/intel64:/usr/local/intel/composer_xe_2011_sp1.10.319/ipp/lib/intel64:/usr/local/intel/composer_xe_2011_sp1.10.319/mkl/lib/intel64:/usr/local/intel/composer_xe_2011_sp1.10.319/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usr/local/intel/composer_xe_2011_sp1.10.319/debugger/lib/intel64:/nfs/01/osu6683/R/R-2.15.1/bin:/nfs/01/osu6683/R/R-2.15.1/lib:/nfs/01/osu6683/R/R-2.15.1/bin:/nfs/01/osu6683/R/R-2.15.1/lib
+++ LD_LIBRARY_PATH=/usr/local/mvapich2/1.7-intel/lib:/usr/local/torque/2.5.12/lib:/usr/local/intel/composer_xe_2011_sp1.10.319/compiler/lib/intel64:/usr/local/intel/composer_xe_2011_sp1.10.319/mpirt/lib/intel64:/usr/local/intel/composer_xe_2011_sp1.10.319/ipp/lib/intel64:/usr/local/intel/composer_xe_2011_sp1.10.319/mkl/lib/intel64:/usr/local/intel/composer_xe_2011_sp1.10.319/tbb/lib/intel64/cc4.1.0_libc2.4_kernel2.6.16.21:/usr/local/intel/composer_xe_2011_sp1.10.319/debugger/lib/intel64:/nfs/01/osu6683/R/R-2.15.1/bin:/nfs/01/osu6683/R/R-2.15.1/lib:/nfs/01/osu6683/R/R-2.15.1/bin:/nfs/01/osu6683/R/R-2.15.1/lib
+++ export CACHE_DIR=/nfs/01/osu6683/.cache
+++ CACHE_DIR=/nfs/01/osu6683/.cache
+++ export PYTHONPATH=:/nfs/01/osu6683/pythonbase/modules:/nfs/01/osu6683/pythonbase/modules
+++ PYTHONPATH=:/nfs/01/osu6683/pythonbase/modules:/nfs/01/osu6683/pythonbase/modules
++ cd /nfs/01/osu6683
++ /usr/bin/time Rscript /nfs/01/osu6683/pymod/boolean_implication_fit/run.all.bool.R /nfs/01/osu6683/c.elegans/clean_data/GSE2180.clean.RData
+Loading required package: BiocGenerics
+Loading required package: methods
+
+Attaching package: ‘BiocGenerics’
+
+The following object(s) are masked from ‘package:stats’:
+
+    xtabs
+
+The following object(s) are masked from ‘package:base’:
+
+    anyDuplicated, cbind, colnames, duplicated, eval, Filter, Find,
+    get, intersect, lapply, Map, mapply, mget, order, paste, pmax,
+    pmax.int, pmin, pmin.int, Position, rbind, Reduce, rep.int,
+    rownames, sapply, setdiff, table, tapply, union, unique
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Error in file(filename, "r", encoding = encoding) : 
+  cannot open the connection
+Calls: source -> file
+In addition: Warning message:
+In file(filename, "r", encoding = encoding) :
+  cannot open file 'step.up.R': No such file or directory
+Execution halted
+0.89user 0.07system 0:01.64elapsed 58%CPU (0avgtext+0avgdata 166624maxresident)k
+43032inputs+8outputs (11major+14191minor)pagefaults 0swaps

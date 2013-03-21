@@ -45,6 +45,7 @@ q00$stat <- (q00$exp-x0.y0)/sqrt(q00$expect)
 q00$err  <- (x0.y0/x0 + x0.y0/y0)/2
 q00$sparse <- q00$stat > Z && q00$err < E || x0.y0 <= quad.min
 if (x0*y0==0 && is.na(q00$sparse)) q00$sparse <- T
+
 # x1.y0
 q10 <- list()
 q10$count <- x1.y0
@@ -53,6 +54,7 @@ q10$stat <- (q10$exp-x1.y0)/sqrt(q10$expect)
 q10$err  <- (x1.y0/x1 + x1.y0/y0)/2
 q10$sparse <- q10$stat > Z && q10$err < E || x1.y0 <= quad.min
 if (x1*y0==0 && is.na(q10$sparse)) q10$sparse <- T
+
 # x0.y1
 q01 <- list()
 q01$count <- x0.y1
@@ -61,6 +63,7 @@ q01$stat <- (q01$exp-x0.y1)/sqrt(q01$expect)
 q01$err  <- (x0.y1/x0 + x0.y1/y1)/2
 q01$sparse <- q01$stat > Z && q01$err < E || x0.y1 <= quad.min
 if (x0*y1==0 && is.na(q01$sparse)) q01$sparse <- T
+
 # x1.y1
 q11 <- list()
 q11$count <- x1.y1
@@ -69,7 +72,6 @@ q11$stat <- (q11$exp-x1.y1)/sqrt(q11$expect)
 q11$err  <- (x1.y1/x1 + x1.y1/y1)/2
 q11$sparse <- q11$stat > Z && q11$err < E || x1.y1 <= quad.min
 if (x1*y1==0 && is.na(q11$sparse)) q11$sparse <- T
-
 
 R <- list(q00=q00,q01=q01,q10=q10,q11=q11,total=total,all=length(x),pct.discard=pct.discard,
           x0.y0=x0.y0, x0.y1=x0.y1, x1.y0=x1.y0, x1.y1=x1.y1, discard=discard)
