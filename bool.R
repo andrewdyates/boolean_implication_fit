@@ -97,7 +97,10 @@ if(pct.discard > (2/3*100)) {
 if(do.plot) {
   col<-rep("black",length(x))
   col[discard]<-"#ffcccc"
-  title <- paste(R$CLS, paste0("(",cls.to.enum(R$CLS),")"), ":", xlab, "vs", ylab)
+  if(xlab != "" && ylab != "")
+    title <- paste(R$CLS, paste0("(",cls.to.enum(R$CLS),")"), ":", xlab, "vs", ylab)
+  else
+    title <- paste(R$CLS, paste0("(",cls.to.enum(R$CLS),")"))
   par(mar=c(9.1,4.1,4.1,2.1))
   plot(x,y, col=col, main=title, xlab=xlab, ylab=ylab)
 
