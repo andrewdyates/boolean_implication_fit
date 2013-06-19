@@ -21,7 +21,7 @@ cls.to.enum <- function(cls) {
 }
 
 ## MAIN FUNCTION
-cls.pair <- function(x, y, x.th, y.th, b.x=0.5, b.y=0.5, do.plot=FALSE, xlab="", ylab="", quad.min=1, Z=3, E=0.1) {
+cls.pair <- function(x, y, x.th, y.th, b.x=0.5, b.y=0.5, do.plot=FALSE, xlab="", ylab="", quad.min=1, Z=3, E=0.1, r.th=2/3) {
 discard <- in.th(x,x.th,b.x) | in.th(y,y.th,b.y)
 pct.discard <- sum(discard)/length(x)*100
 
@@ -77,7 +77,7 @@ R <- list(q00=q00,q01=q01,q10=q10,q11=q11,total=total,all=length(x),pct.discard=
           x0.y0=x0.y0, x0.y1=x0.y1, x1.y0=x1.y0, x1.y1=x1.y1, discard=discard)
 
 # Choose class.
-if(pct.discard > (2/3*100)) {
+if(pct.discard > (r.th*100)) {
   R$CLS <- "NA"
 } else {
   R$CLS <- "UNL"

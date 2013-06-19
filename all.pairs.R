@@ -12,7 +12,7 @@ all.steps <- function(M, do.plot=FALSE) {
   STEPS
 }
 
-all.pairs.cls <- function(M, steps, b, do.plot=FALSE) {
+all.pairs.cls <- function(M, steps, b, do.plot=FALSE, r.th=2/3) {
   n <- dim(M)[1]
   CLS <- mat.or.vec(n,n)
   for(i in 1:n) { # row
@@ -23,7 +23,7 @@ all.pairs.cls <- function(M, steps, b, do.plot=FALSE) {
       x.th <- steps[[j]]$th
       x.title=rownames(M)[j]
       y.title=rownames(M)[i]
-      RR <- cls.pair(x,y,x.th,y.th, b.x=b, b.y=b, do.plot=do.plot, xlab=x.title, ylab=y.title)
+      RR <- cls.pair(x,y,x.th,y.th, b.x=b, b.y=b, do.plot=do.plot, xlab=x.title, ylab=y.title, r.th=r.th)
       CLS[i,j] <- cls.to.enum(RR$CLS)
     }
   }
