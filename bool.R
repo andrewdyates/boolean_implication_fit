@@ -21,6 +21,7 @@ cls.to.enum <- function(cls) {
 }
 
 ## MAIN FUNCTION
+# x is ROW. y is COLUMN
 cls.pair <- function(x, y, x.th, y.th, b.x=0.5, b.y=0.5, do.plot=FALSE, xlab="", ylab="", quad.min=1, Z=3, E=0.1) {
 discard <- in.th(x,x.th,b.x) | in.th(y,y.th,b.y)
 pct.discard <- sum(discard)/length(x)*100
